@@ -1,0 +1,26 @@
+import numpy as np # Creating a sample array
+arr = np.array([5, 2, 9, 7, 2, 8, 1, 9, 4])
+print("Original Array:", arr)
+
+num = 5
+less_than_num = arr[arr < num]
+greater_than_num = arr[arr > num]
+
+print("\nNumbers less than", num, ":", less_than_num)
+print("Numbers greater than", num, ":", greater_than_num)
+
+print("\nIndex of maximum number:", np.argmax(arr))
+print("Index of minimum number:", np.argmin(arr))
+
+print("Maximum value:", np.max(arr))
+print("Minimum value:", np.min(arr))
+
+print("\nArray representation:", np.array_repr(arr))
+
+value_to_count = 2
+print(f"Count of {value_to_count} in array:", np.count_nonzero(arr == value_to_count))
+
+print("Bincount of array:", np.bincount(arr))
+
+unique_elements = np.unique(arr)
+print("Unique elements in array:", unique_elements)
